@@ -1,8 +1,10 @@
-A simple script for toggleing xinput
+A simple script for toggleing trackpad for Dell machines on Ubuntu 16.04
 
 First, go to terminal. Type xinput. Output Example:
 
-user@dell ~ $ xinput                                                                                                                                                      [ruby-2.3.1p112]
+```shell
+
+                       
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
 ⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
 ⎜   ↳ DELL0802:00 06CB:7E92 Touchpad          	id=12	[slave  pointer  (2)]
@@ -22,6 +24,9 @@ user@dell ~ $ xinput                                                            
     ↳ AT Translated Set 2 keyboard            	id=16	[slave  keyboard (3)]
     ↳ Delux Efficiency  series                	id=18	[slave  keyboard (3)]
     
+
+```
+
 In this case the touchpad is the device with id=12
 
 Create a the script in ~/toggle_touchpad.sh containing
@@ -40,7 +45,9 @@ fi
 ```
 
 Change the permissions of the file to make it executable:
-
-chmod +x ~/toggle_touchpad.sh
-
+```bash
+$ chmod +x ~/toggle_touchpad.sh
+```
 And add it to the unity keyboard shortcuts
+
+![alt text](keyboard_shortcut.png)
