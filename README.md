@@ -26,6 +26,7 @@ In this case the touchpad is the device with id=12
 
 Create a the script in ~/toggle_touchpad.sh containing
 
+```bash
 #!/bin/bash
 
 device=12
@@ -36,6 +37,7 @@ if [ $state == '1' ];then
 else
     xinput --enable $device && notify-send -i input-touchpad "Touchpad" "Enabled"
 fi
+```
 
 Change the permissions of the file to make it executable:
 
